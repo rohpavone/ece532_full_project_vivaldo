@@ -1,0 +1,755 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Mar 19 10:52:07 2018
+# Process ID: 17548
+# Current directory: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr
+# Command line: vivado
+# Log file: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivado.log
+# Journal file: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd}
+open_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.xpr
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.aresetn {true}] [get_bd_cells xfft_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Has_ARESETn {true}] [get_bd_cells multiply]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Has_ARESETn {true}] [get_bd_cells multiply1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Has_ARESETn {true}] [get_bd_cells add]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Has_ARESETn {true}] [get_bd_cells floating_point_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Has_ARESETn {true}] [get_bd_cells sqrtf]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Has_ARESETn {true}] [get_bd_cells flt_to_int]
+endgroup
+connect_bd_net [get_bd_pins multiply/aresetn] [get_bd_pins multiply1/aresetn]
+connect_bd_net [get_bd_pins multiply1/aresetn] [get_bd_pins floating_point_0/aresetn]
+connect_bd_net [get_bd_pins sqrtf/aresetn] [get_bd_pins multiply/aresetn]
+connect_bd_net [get_bd_pins flt_to_int/aresetn] [get_bd_pins multiply/aresetn]
+connect_bd_net [get_bd_pins xfft_1/aresetn] [get_bd_pins multiply/aresetn]
+disconnect_bd_net /Net [get_bd_pins multiply/aresetn]
+startgroup
+make_bd_pins_external  [get_bd_pins multiply/aresetn]
+endgroup
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins multiply1/aresetn]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins add/aresetn]
+validate_bd_design
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+make_wrapper -files [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd] -top
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 {design_1_xlconcat_0_0_synth_1 design_1_floating_point_0_1_synth_1 design_1_xlconstant_0_1_synth_1 design_1_multiply2_0_synth_1 design_1_xlconcat_1_1_synth_1 design_1_xlconstant_0_2_synth_1 design_1_xfft_1_0_synth_1 design_1_floating_point_0_0_synth_1 design_1_multiply_0_synth_1 design_1_multiply_1_synth_1 design_1_util_vector_logic_0_0_synth_1 design_1_util_vector_logic_0_1_synth_1 design_1_util_vector_logic_0_2_synth_1 design_1_floating_point_1_0_synth_1}
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd}
+launch_simulation
+source fft_sim.tcl
+run 100 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd}
+relaunch_sim
+run 100 us
+relaunch_sim
+close_sim
+launch_simulation
+source fft_sim.tcl
+run 100 us
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source fft_sim.tcl
+run 100 us
+run 100 us
+run 100 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd}
+close_sim
+launch_simulation
+source fft_sim.tcl
+run 100 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_ports fft_valid]
+startgroup
+endgroup
+startgroup
+endgroup
+startgroup
+endgroup
+startgroup
+endgroup
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+validate_bd_design -force
+current_project geralds_fft
+make_wrapper -files [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd] -top
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_fft/geralds_fft.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+source fft_sim.tcl
+run 100 us
+relaunch_sim
+run 100 us
+close_sim
+launch_simulation
+source fft_sim.tcl
+run 100 us
+relaunch_sim
+run 100 us
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+close_sim
+launch_simulation
+source fft_sim.tcl
+run 100 us
+run 100 us
+close_sim
+launch_simulation
+source fft_sim.tcl
+run 100 us
+run 40 us
+ipx::package_project -root_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_fft -vendor user.org -library user -taxonomy /UserIP -import_files -set_current false
+ipx::unload_core /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_fft/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_fft /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_fft/component.xml
+update_compile_order -fileset sources_1
+set_property name geralds_fft [ipx::current_core]
+set_property display_name geralds_fft [ipx::current_core]
+set_property description {Takes a 1024 point magnitude FFT of the inputted data. Takes approximately 33us (@100MHz) to calculate the FFT and an extra 1024 cycles to start output. Reset must be low for at least 2 clock cycles.} [ipx::current_core]
+set_property previous_version_for_upgrade user.org:user:design_1_wrapper:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_fft
+close_sim
+close_project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:geralds_fft:1.0 [get_ips  design_1_geralds_fft_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_geralds_fft_0_0] -no_script -sync -force -quiet
+connect_bd_net [get_bd_pins geralds_fft_0/aresetn] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+regenerate_bd_layout
+validate_bd_design
+report_ip_status -name ip_status 
+open_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+set_property description {Takes 2 FFTs as inputs through AXI streams and computes the angle between them in order to determine their similarity. Output is scaled from 0 to 255. The clock cycle after signal_t_last going high is identical to a reset on the signal's AXIS FIFO} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 30 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+launch_simulation
+launch_simulation
+source corr_wrapper_tb.tcl
+run 40 us
+relaunch_sim
+run 40 us
+run 40 us
+run 40 us
+relaunch_sim
+run 40 us
+relaunch_sim
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+current_project geralds_correlation_wrapper
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+run 40 us
+relaunch_sim
+run 40 us
+relaunch_sim
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+current_project projection_correlation_calculator_v1_0_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 31 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+relaunch_sim
+run 40 us
+relaunch_sim
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 32 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+relaunch_sim
+run 40 us
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+current_project geralds_correlation_wrapper
+relaunch_sim
+run 40 us
+relaunch_sim
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+run 40 us
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+current_project projection_correlation_calculator_v1_0_v1_0_project
+close_project
+ipx::package_project -root_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper -vendor user.org -library user -taxonomy /UserIP -import_files -set_current false
+ipx::unload_core /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper/component.xml
+update_compile_order -fileset sources_1
+set_property name geralds_correlation_wrapper [ipx::current_core]
+set_property display_name geralds_correlation_wrapper [ipx::current_core]
+set_property description {Takes the cosine between two inputted FFTs. Normalizes the output to 8 bits. Synchrnoizes itself by setting its signal FIFO write pointer and resetting its reads when a TLAST is recevied from the signal.} [ipx::current_core]
+set_property previous_version_for_upgrade user.org:user:corr_wrapper_wrapper:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+close_sim
+close_project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:geralds_correlation_wrapper:1.0 [get_ips  design_1_geralds_correlation_wrapper_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_geralds_correlation_wrapper_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+startgroup
+set_property -dict [list CONFIG.C_DATA_DEPTH {131072} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_BRAM_CNT {28.5}] [get_bd_cells system_ila_0]
+endgroup
+startgroup
+endgroup
+validate_bd_design
+regenerate_bd_layout
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_geralds_fft_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_geralds_correlation_wrapper_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 {design_1_system_ila_0_0_synth_1 design_1_geralds_fft_0_0_synth_1 design_1_geralds_correlation_wrapper_0_0_synth_1}
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+startgroup
+set_property -dict [list CONFIG.C_DATA_DEPTH {32768} CONFIG.C_BRAM_CNT {7.5}] [get_bd_cells system_ila_0]
+endgroup
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_system_ila_0_0] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 design_1_system_ila_0_0_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file copy -force /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/impl_1/design_1_wrapper.sysdef /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk -hwspec /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper.hdf
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"design_1_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd}
+open_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+current_project geralds_correlation_wrapper
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+current_project projection_correlation_calculator_v1_0_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 33 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project geralds_correlation_wrapper
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+upgrade_ip -vlnv user.org:user:geralds_correlation_wrapper:1.0 [get_ips  design_1_geralds_correlation_wrapper_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_geralds_correlation_wrapper_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_geralds_correlation_wrapper_0_0] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+report_ip_status -name ip_status 
+set_property location {10 3684 855} [get_bd_cells axi_dma_0]
+save_bd_design
+file copy -force /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/impl_1/design_1_wrapper.sysdef /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk -hwspec /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper.hdf
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd}
+current_project geralds_correlation_wrapper
+relaunch_sim
+run 40 us
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+report_ip_status -name ip_status 
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+current_project geralds_correlation_wrapper
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+current_project geralds_correlation_wrapper
+current_project projection_correlation_calculator_v1_0_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 34 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+ipx::package_project -root_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper -vendor user.org -library user -taxonomy /UserIP -import_files -set_current false -force
+ipx::unload_core /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper/component.xml
+update_compile_order -fileset sources_1
+set_property name geralds_correlation_wrapper [ipx::current_core]
+set_property display_name geralds_correlation_wrapper [ipx::current_core]
+set_property description {Performs cosine correlation between 2 FFTs. Normalized to 8 bits.} [ipx::current_core]
+set_property previous_version_for_upgrade user.org:user:corr_wrapper_wrapper:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+report_ip_status -name ip_status 
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project geralds_correlation_wrapper
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+upgrade_ip -vlnv user.org:user:geralds_correlation_wrapper:1.0 [get_ips  design_1_geralds_correlation_wrapper_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_geralds_correlation_wrapper_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_geralds_correlation_wrapper_0_0] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 design_1_geralds_correlation_wrapper_0_0_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+current_project geralds_correlation_wrapper
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+current_project projection_correlation_calculator_v1_0_v1_0_project
+close_project
+close_sim
+close_project
+report_ip_status -name ip_status 
+open_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.xpr
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property description {Takes 2 FFTs as inputs through AXI streams and computes the angle between them in order to determine their similarity. Output is scaled from 0 to 255. The clock cycle after signal_t_last going high is identical to a reset on the signal's AXIS FIFO. Does not use circular buffers.} [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 35 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:geralds_correlation_wrapper:1.0 [get_ips  design_1_geralds_correlation_wrapper_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_geralds_correlation_wrapper_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_geralds_correlation_wrapper_0_0] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+current_project geralds_correlation_wrapper
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+report_ip_status -name ip_status 
+current_project geralds_correlation_wrapper
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 36 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+current_project geralds_correlation_wrapper
+relaunch_sim
+run 40 us
+current_project projection_correlation_calculator_v1_0_v1_0_project
+current_project geralds_correlation_wrapper
+current_project projection_correlation_calculator_v1_0_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 37 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+relaunch_sim
+run 40 us
+relaunch_sim
+run 40 us
+ipx::package_project -root_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper -vendor user.org -library user -taxonomy /UserIP -import_files -set_current false
+ipx::unload_core /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper/component.xml
+update_compile_order -fileset sources_1
+set_property name geralds_correlation_wrapper [ipx::current_core]
+set_property display_name geralds_correlation_wrapper [ipx::current_core]
+set_property description {Takes the cosine between two FFTs and normalizes it to 8 bits. Does not use circular buffers. TLAST is treated as a reset if it is inputted before the signal FFT is done being written.} [ipx::current_core]
+current_project geralds_correlation_wrapper
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 38 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+current_project geralds_correlation_wrapper
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project tmp_edit_project
+current_project geralds_correlation_wrapper
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+run 40 us
+relaunch_sim
+run 40 us
+current_project tmp_edit_project
+close_project
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd}
+report_ip_status -name ip_status 
+ipx::package_project -root_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper -vendor user.org -library user -taxonomy /UserIP -import_files -set_current false -force
+ipx::unload_core /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation_wrapper/component.xml
+update_compile_order -fileset sources_1
+set_property description {Takes the cosine between two FFTs and normalizes it to 8 bits. Does not use circular buffers. TLAST is treated as a reset if it is inputted before the signal FFT is done being written.} [ipx::current_core]
+set_property name geralds_correlation_wrapper [ipx::current_core]
+set_property display_name geralds_correlation_wrapper [ipx::current_core]
+set_property previous_version_for_upgrade user.org:user:corr_wrapper_wrapper:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+report_ip_status -name ip_status 
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:geralds_correlation_wrapper:1.0 [get_ips  design_1_geralds_correlation_wrapper_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_geralds_correlation_wrapper_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_geralds_correlation_wrapper_0_0] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 design_1_geralds_correlation_wrapper_0_0_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file copy -force /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/impl_1/design_1_wrapper.sysdef /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk -hwspec /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper.hdf
+current_project geralds_correlation_wrapper
+report_ip_status -name ip_status 
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+current_project geralds_correlation_wrapper
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+current_project geralds_correlation_wrapper
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+open_bd_design {/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd}
+current_project projection_correlation_calculator_v1_0_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 39 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project geralds_correlation_wrapper
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+upgrade_ip -vlnv user.org:user:geralds_correlation_wrapper:1.0 [get_ips  design_1_geralds_correlation_wrapper_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_geralds_correlation_wrapper_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_geralds_correlation_wrapper_0_0] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/design_1.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+current_project geralds_correlation_wrapper
+ipx::edit_ip_in_project -upgrade true -name projection_correlation_calculator_v1_0_v1_0_project -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.tmp/projection_correlation_calculator_v1_0_v1_0_project /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/geralds_correlation/component.xml
+update_compile_order -fileset sources_1
+current_project vivaldo_fresh_eth_xadc_fft_dma_corr
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+file copy -force /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/impl_1/design_1_wrapper.sysdef /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk -hwspec /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper.hdf
+current_project projection_correlation_calculator_v1_0_v1_0_project
+launch_simulation
+source projection_correlation_calculator_v1_0.tcl
+run 40 us
+current_project geralds_correlation_wrapper
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:projection_correlation_calculator_v1_0:1.0 [get_ips  corr_wrapper_projection_correlation_calculator_v1_0_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips corr_wrapper_projection_correlation_calculator_v1_0_0_1] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target all [get_files  /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+catch { config_ip_cache -export [get_ips -all corr_wrapper_projection_correlation_calculator_v1_0_0_1] }
+export_ip_user_files -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd]
+launch_runs -jobs 8 corr_wrapper_projection_correlation_calculator_v1_0_0_1_synth_1
+export_simulation -of_objects [get_files /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.srcs/sources_1/bd/corr_wrapper/corr_wrapper.bd] -directory /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/sim_scripts -ip_user_files_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files -ipstatic_source_dir /nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.ip_user_files/ipstatic -lib_map_path [list {modelsim=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/modelsim} {questa=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/questa} {ies=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/ies} {vcs=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/vcs} {riviera=/nfs/ug/homes-1/t/tramblei/vivaldo/ip_repo/ip_projects/geralds_correlation_wrapper/geralds_correlation_wrapper.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+current_sim simulation_21
+close_sim
+launch_simulation
+source corr_wrapper_tb.tcl
+run 40 us
+restart
+run 40 us
+run 40 us
+restart
+run 40 us
+run 40 us
+current_project projection_correlation_calculator_v1_0_v1_0_project
+current_sim simulation_22
+current_project geralds_correlation_wrapper
+current_sim simulation_23
+restart
+run 40 us
+current_project projection_correlation_calculator_v1_0_v1_0_project
+current_sim simulation_22
+current_project geralds_correlation_wrapper
+current_sim simulation_23
+close_sim
+close_project
+close_sim
+close_project

@@ -1,0 +1,651 @@
+
+*** Running vivado
+    with args -log design_1_geralds_correlation_wrapper_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_geralds_correlation_wrapper_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_geralds_correlation_wrapper_0_0.tcl -notrace
+Command: synth_design -top design_1_geralds_correlation_wrapper_0_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 27748 
+WARNING: [Synth 8-2507] parameter declaration becomes local in projection_correlation_calculator_v1_0_golden_fft_AXIS with formal parameter declaration list [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_golden_fft_AXIS.v:55]
+WARNING: [Synth 8-2507] parameter declaration becomes local in projection_correlation_calculator_v1_0_signal_fft_AXIS with formal parameter declaration list [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_signal_fft_AXIS.v:58]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1217.824 ; gain = 85.250 ; free physical = 3438 ; free virtual = 35356
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_geralds_correlation_wrapper_0_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/synth/design_1_geralds_correlation_wrapper_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_wrapper' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ipshared/8f2a/src/corr_wrapper_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ipshared/8f2a/src/corr_wrapper.v:13]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_c_shift_ram_0_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_0_0/synth/corr_wrapper_c_shift_ram_0_0.vhd:68]
+INFO: [Synth 8-3491] module 'c_shift_ram_v12_0_10' declared at '/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/5ac0/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2590' bound to instance 'U0' of component 'c_shift_ram_v12_0_10' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_0_0/synth/corr_wrapper_c_shift_ram_0_0.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_c_shift_ram_0_0' (5#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_0_0/synth/corr_wrapper_c_shift_ram_0_0.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_cordic_0_2' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_cordic_0_2/synth/corr_wrapper_cordic_0_2.vhd:70]
+INFO: [Synth 8-3491] module 'cordic_v6_0_11' declared at '/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/5255/hdl/cordic_v6_0_vh_rfs.vhd:10135' bound to instance 'U0' of component 'cordic_v6_0_11' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_cordic_0_2/synth/corr_wrapper_cordic_0_2.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_cordic_0_2' (20#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_cordic_0_2/synth/corr_wrapper_cordic_0_2.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_cordic_2_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_cordic_2_0/synth/corr_wrapper_cordic_2_0.vhd:70]
+INFO: [Synth 8-3491] module 'cordic_v6_0_11' declared at '/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/5255/hdl/cordic_v6_0_vh_rfs.vhd:10135' bound to instance 'U0' of component 'cordic_v6_0_11' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_cordic_2_0/synth/corr_wrapper_cordic_2_0.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_cordic_2_0' (21#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_cordic_2_0/synth/corr_wrapper_cordic_2_0.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_div_gen_0_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_div_gen_0_0/synth/corr_wrapper_div_gen_0_0.vhd:72]
+INFO: [Synth 8-3491] module 'div_gen_v5_1_11' declared at '/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/67f8/hdl/div_gen_v5_1_vh_rfs.vhd:13849' bound to instance 'U0' of component 'div_gen_v5_1_11' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_div_gen_0_0/synth/corr_wrapper_div_gen_0_0.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_div_gen_0_0' (30#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_div_gen_0_0/synth/corr_wrapper_div_gen_0_0.vhd:72]
+WARNING: [Synth 8-350] instance 'div_gen_0' of module 'corr_wrapper_div_gen_0_0' requires 8 connections, but only 7 given [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ipshared/8f2a/src/corr_wrapper.v:182]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_c_shift_ram_1_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_1_0/synth/corr_wrapper_c_shift_ram_1_0.vhd:68]
+INFO: [Synth 8-3491] module 'c_shift_ram_v12_0_10' declared at '/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/5ac0/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2590' bound to instance 'U0' of component 'c_shift_ram_v12_0_10' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_1_0/synth/corr_wrapper_c_shift_ram_1_0.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_c_shift_ram_1_0' (31#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_1_0/synth/corr_wrapper_c_shift_ram_1_0.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_c_shift_ram_2_1' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_2_1/synth/corr_wrapper_c_shift_ram_2_1.vhd:68]
+INFO: [Synth 8-3491] module 'c_shift_ram_v12_0_10' declared at '/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/5ac0/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2590' bound to instance 'U0' of component 'c_shift_ram_v12_0_10' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_2_1/synth/corr_wrapper_c_shift_ram_2_1.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_c_shift_ram_2_1' (32#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_c_shift_ram_2_1/synth/corr_wrapper_c_shift_ram_2_1.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_mult_gen_0_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_mult_gen_0_0/synth/corr_wrapper_mult_gen_0_0.vhd:68]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_mult_gen_0_0/synth/corr_wrapper_mult_gen_0_0.vhd:71]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_mult_gen_0_0/synth/corr_wrapper_mult_gen_0_0.vhd:71]
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_12' declared at '/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/f0ab/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_12' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_mult_gen_0_0/synth/corr_wrapper_mult_gen_0_0.vhd:116]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_mult_gen_0_0' (37#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_mult_gen_0_0/synth/corr_wrapper_mult_gen_0_0.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_projection_correlation_calculator_v1_0_0_1' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_projection_correlation_calculator_v1_0_0_1/synth/corr_wrapper_projection_correlation_calculator_v1_0_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'projection_correlation_calculator_v1_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:4]
+INFO: [Synth 8-638] synthesizing module 'projection_correlation_calculator_v1_0_signal_fft_AXIS' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_signal_fft_AXIS.v:4]
+INFO: [Synth 8-256] done synthesizing module 'projection_correlation_calculator_v1_0_signal_fft_AXIS' (38#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_signal_fft_AXIS.v:4]
+WARNING: [Synth 8-689] width (48) of port connection 'fifo_read_data' does not match port width (16) of module 'projection_correlation_calculator_v1_0_signal_fft_AXIS' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:122]
+INFO: [Synth 8-638] synthesizing module 'projection_correlation_calculator_v1_0_golden_fft_AXIS' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_golden_fft_AXIS.v:4]
+INFO: [Synth 8-256] done synthesizing module 'projection_correlation_calculator_v1_0_golden_fft_AXIS' (39#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_golden_fft_AXIS.v:4]
+WARNING: [Synth 8-689] width (48) of port connection 'fifo_read_data' does not match port width (16) of module 'projection_correlation_calculator_v1_0_golden_fft_AXIS' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:140]
+INFO: [Synth 8-638] synthesizing module 'projection_correlation_calculator_v1_0_correlation_out_AXI' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_correlation_out_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_correlation_out_AXI.v:366]
+WARNING: [Synth 8-6014] Unused sequential element byte_index was removed.  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_correlation_out_AXI.v:223]
+INFO: [Synth 8-256] done synthesizing module 'projection_correlation_calculator_v1_0_correlation_out_AXI' (40#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_correlation_out_AXI.v:4]
+WARNING: [Synth 8-5788] Register signal_fifo_read_data_reg in module projection_correlation_calculator_v1_0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:208]
+WARNING: [Synth 8-5788] Register golden_fifo_read_data_reg in module projection_correlation_calculator_v1_0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:208]
+WARNING: [Synth 8-5788] Register signal_read_data_out_reg in module projection_correlation_calculator_v1_0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:219]
+WARNING: [Synth 8-5788] Register golden_read_data_out_reg in module projection_correlation_calculator_v1_0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:220]
+WARNING: [Synth 8-5788] Register sum_out_reg in module projection_correlation_calculator_v1_0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:221]
+INFO: [Synth 8-256] done synthesizing module 'projection_correlation_calculator_v1_0' (41#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:4]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_projection_correlation_calculator_v1_0_0_1' (42#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_projection_correlation_calculator_v1_0_0_1/synth/corr_wrapper_projection_correlation_calculator_v1_0_0_1.v:56]
+WARNING: [Synth 8-350] instance 'projection_correlation_calculator_v1_0_0' of module 'corr_wrapper_projection_correlation_calculator_v1_0_0_1' requires 43 connections, but only 42 given [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ipshared/8f2a/src/corr_wrapper.v:205]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_util_vector_logic_2_1' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_util_vector_logic_2_1/synth/corr_wrapper_util_vector_logic_2_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-256] done synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic' (43#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_util_vector_logic_2_1' (44#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_util_vector_logic_2_1/synth/corr_wrapper_util_vector_logic_2_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_util_vector_logic_2_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_util_vector_logic_2_0/synth/corr_wrapper_util_vector_logic_2_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_util_vector_logic_2_0' (45#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_util_vector_logic_2_0/synth/corr_wrapper_util_vector_logic_2_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_util_vector_logic_0_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_util_vector_logic_0_0/synth/corr_wrapper_util_vector_logic_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic__parameterized0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-256] done synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic__parameterized0' (45#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_util_vector_logic_0_0' (46#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_util_vector_logic_0_0/synth/corr_wrapper_util_vector_logic_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_util_vector_logic_1_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_util_vector_logic_1_0/synth/corr_wrapper_util_vector_logic_1_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_util_vector_logic_1_0' (47#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_util_vector_logic_1_0/synth/corr_wrapper_util_vector_logic_1_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_xlconcat_0_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_xlconcat_0_0/synth/corr_wrapper_xlconcat_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'xlconcat_v2_1_1_xlconcat' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/73b7/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-256] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (48#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/73b7/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_xlconcat_0_0' (49#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_xlconcat_0_0/synth/corr_wrapper_xlconcat_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_xlslice_0_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_xlslice_0_0/synth/corr_wrapper_xlslice_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xlslice_v1_0_1_xlslice' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/bb23/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-256] done synthesizing module 'xlslice_v1_0_1_xlslice' (50#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/bb23/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_xlslice_0_0' (51#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_xlslice_0_0/synth/corr_wrapper_xlslice_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'corr_wrapper_xlconstant_0_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_xlconstant_0_0/synth/corr_wrapper_xlconstant_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xlconstant_v1_1_3_xlconstant' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/45df/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'xlconstant_v1_1_3_xlconstant' (52#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/45df/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_xlconstant_0_0' (53#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_xlconstant_0_0/synth/corr_wrapper_xlconstant_0_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper' (54#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ipshared/8f2a/src/corr_wrapper.v:13]
+INFO: [Synth 8-256] done synthesizing module 'corr_wrapper_wrapper' (55#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ipshared/8f2a/src/corr_wrapper_wrapper.v:12]
+INFO: [Synth 8-256] done synthesizing module 'design_1_geralds_correlation_wrapper_0_0' (56#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/synth/design_1_geralds_correlation_wrapper_0_0.v:56]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[127]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[126]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[125]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[124]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[123]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[122]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[121]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[120]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[119]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[118]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[117]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[116]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[115]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[114]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[113]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[112]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[111]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[110]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[109]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[108]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[107]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[106]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[105]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[104]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[103]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[102]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[101]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[100]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[99]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[98]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[97]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[96]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[63]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[62]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[61]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[60]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[59]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[58]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[57]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[56]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[55]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[54]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[53]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[52]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[51]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[50]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[49]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[48]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[47]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[46]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[45]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[44]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[43]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[42]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[41]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[40]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[39]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[38]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[37]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[36]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[35]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[34]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[33]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[32]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[31]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[30]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[29]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[28]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[27]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[26]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[25]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[24]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[23]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[22]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[21]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[20]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[19]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[18]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[17]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[16]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[15]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[14]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[13]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[12]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[11]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[10]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[9]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[8]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[7]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[6]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[5]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[4]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[3]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[2]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[1]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In6[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1378.074 ; gain = 245.500 ; free physical = 3360 ; free virtual = 35282
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1378.074 ; gain = 245.500 ; free physical = 3379 ; free virtual = 35302
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 11660 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_ooc.xdc] for cell 'inst/corr_wrapper_i'
+Finished Parsing XDC File [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/src/corr_wrapper_ooc.xdc] for cell 'inst/corr_wrapper_i'
+Parsing XDC File [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/design_1_geralds_correlation_wrapper_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/design_1_geralds_correlation_wrapper_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 528 instances were transformed.
+  MULT_AND => LUT2: 528 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1735.793 ; gain = 12.000 ; free physical = 3069 ; free virtual = 34991
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1735.793 ; gain = 603.219 ; free physical = 3208 ; free virtual = 35130
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1735.793 ; gain = 603.219 ; free physical = 3208 ; free virtual = 35130
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/c_shift_ram_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/cordic_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/cordic_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/div_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/dp_out. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/dp_valid. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/mult_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/sqrt_ready_dp_valid. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/sqrts_ready. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/util_vector_logic_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/util_vector_logic_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/xlslice_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/corr_wrapper_i/zero_constant. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1735.793 ; gain = 603.219 ; free physical = 3210 ; free virtual = 35132
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "writes_done" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element write_pointer_reg was removed.  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_signal_fft_AXIS.v:119]
+INFO: [Synth 8-5546] ROM "writes_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sum" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element fifo_read_reg was removed.  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:120]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1735.793 ; gain = 603.219 ; free physical = 3193 ; free virtual = 35116
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "inst/projection_correlation_calculator_v1_0_golden_fft_AXIS_inst/writes_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst/sum" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element inst/projection_correlation_calculator_v1_0_signal_fft_AXIS_inst/write_pointer_reg was removed.  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0_signal_fft_AXIS.v:119]
+WARNING: [Synth 8-6014] Unused sequential element inst/fifo_read_reg was removed.  [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:120]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[0][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[1][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[2][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[3][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[4][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[5][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[6][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[0][41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[1][41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[2][41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/mult_gen_0 /U0/i_mult/\gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][50] )
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[0][36]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[1][36]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[0][41]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[2][36]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[3][36]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[1][41]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][50]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[4][36]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[5][36]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[2][41]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[6][36]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_1_add.stage_1_pipeline.s1_add_out_reg[7][36]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[3][41]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_2_add.stage_2_pipeline.s2_add_out_reg[3][40]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[1][50]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[1][49]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[1][48]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][67]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][66]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][65]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3332] Sequential element (gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][64]) is unused and will be removed from module mult_gen_v12_0_12_viv.
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[0]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[1]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[1]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[2]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[2]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[3]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[3]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[4]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[4]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[5]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[5]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[6]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[6]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[7]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[7]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[8]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[8]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[9]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[9]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[10]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[10]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[11]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[11]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[12]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[12]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[13]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[13]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[14]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[14]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[15]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[15]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[16]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[16]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[17]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[17]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[18]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[18]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[19]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[19]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[20]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[20]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[21]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[21]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[22]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[22]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[23]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[23]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[24]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[24]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[25]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[25]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[26]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[26]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[27]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[27]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[28]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[28]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[29]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[29]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[30]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[30]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/correlation_result_squared_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0/inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/corr_wrapper_i/projection_correlation_calculator_v1_0_0 /\inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg3_reg[31]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/slv_reg2_reg[31]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/projection_correlation_calculator_v1_0_correlation_out_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[47]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[46]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[45]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[44]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[43]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[42]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[41]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[40]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[39]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[38]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[37]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[36]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[35]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[34]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[33]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[32]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[31]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[30]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[29]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[28]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[27]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[26]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[25]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[24]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[23]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[22]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[21]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[20]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[19]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[18]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[17]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[16]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[15]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[14]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[13]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[12]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[11]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[10]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[9]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[8]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[7]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[6]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[5]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[4]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[3]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[2]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[1]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+INFO: [Synth 8-3332] Sequential element (inst/correlation_result_squared_reg[0]) is unused and will be removed from module corr_wrapper_projection_correlation_calculator_v1_0_0_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1735.793 ; gain = 603.219 ; free physical = 3157 ; free virtual = 35079
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1735.793 ; gain = 603.219 ; free physical = 3021 ; free virtual = 34943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 1735.793 ; gain = 603.219 ; free physical = 2992 ; free virtual = 34914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:198]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:199]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_geralds_correlation_wrapper_0_0/ipshared/fa10/src/projection_correlation_calculator_v1_0.v:197]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1757.371 ; gain = 624.797 ; free physical = 2977 ; free virtual = 34899
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1757.371 ; gain = 624.797 ; free physical = 2976 ; free virtual = 34898
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1757.371 ; gain = 624.797 ; free physical = 2976 ; free virtual = 34898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1757.371 ; gain = 624.797 ; free physical = 2948 ; free virtual = 34870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1757.371 ; gain = 624.797 ; free physical = 2948 ; free virtual = 34870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1757.371 ; gain = 624.797 ; free physical = 2948 ; free virtual = 34870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1757.371 ; gain = 624.797 ; free physical = 2948 ; free virtual = 34870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |   154|
+|2     |DSP48E1_1 |     3|
+|3     |LUT1      |   444|
+|4     |LUT2      |  1478|
+|5     |LUT3      |  4600|
+|6     |LUT4      |   575|
+|7     |LUT5      |   282|
+|8     |LUT6      |   188|
+|9     |MULT_AND  |   528|
+|10    |MUXCY     |  5489|
+|11    |MUXF7     |    64|
+|12    |MUXF8     |    32|
+|13    |RAM64M    |   160|
+|14    |RAM64X1D  |    32|
+|15    |SRL16E    |    89|
+|16    |SRLC32E   |    53|
+|17    |XORCY     |  5453|
+|18    |FDCE      |   170|
+|19    |FDPE      |     1|
+|20    |FDRE      | 15212|
+|21    |FDSE      |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1757.371 ; gain = 624.797 ; free physical = 2948 ; free virtual = 34870
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 394 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1757.371 ; gain = 267.078 ; free physical = 3018 ; free virtual = 34941
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1757.379 ; gain = 624.797 ; free physical = 3020 ; free virtual = 34942
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 11819 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2181 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 1461 instances
+  MULT_AND => LUT2: 528 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 160 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 32 instances
+
+270 Infos, 118 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 1823.551 ; gain = 706.559 ; free physical = 2970 ; free virtual = 34892
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/design_1_geralds_correlation_wrapper_0_0_synth_1/design_1_geralds_correlation_wrapper_0_0.dcp' has been generated.

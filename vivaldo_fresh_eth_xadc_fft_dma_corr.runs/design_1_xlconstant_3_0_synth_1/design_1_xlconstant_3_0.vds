@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Mar 17 21:10:26 2018
+# Process ID: 12403
+# Current directory: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/design_1_xlconstant_3_0_synth_1
+# Command line: vivado -log design_1_xlconstant_3_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xlconstant_3_0.tcl
+# Log file: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/design_1_xlconstant_3_0_synth_1/design_1_xlconstant_3_0.vds
+# Journal file: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.runs/design_1_xlconstant_3_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_xlconstant_3_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1200.570 ; gain = 72.000 ; free physical = 4268 ; free virtual = 36257
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_3_0' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'xlconstant_v1_1_3_xlconstant' [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ipshared/45df/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'xlconstant_v1_1_3_xlconstant' (1#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ipshared/45df/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xlconstant_3_0' (2#1) [/nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:57]
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1241.070 ; gain = 112.500 ; free physical = 4159 ; free virtual = 36153
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1241.070 ; gain = 112.500 ; free physical = 4157 ; free virtual = 36151
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1497.930 ; gain = 0.000 ; free physical = 3569 ; free virtual = 35556
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1497.930 ; gain = 369.359 ; free physical = 3432 ; free virtual = 35411
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1497.930 ; gain = 369.359 ; free physical = 3432 ; free virtual = 35411
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1497.930 ; gain = 369.359 ; free physical = 3432 ; free virtual = 35411
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1497.930 ; gain = 369.359 ; free physical = 3432 ; free virtual = 35411
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1497.930 ; gain = 369.359 ; free physical = 3414 ; free virtual = 35394
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1512.914 ; gain = 384.344 ; free physical = 3273 ; free virtual = 35267
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1512.914 ; gain = 384.344 ; free physical = 3275 ; free virtual = 35269
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1521.930 ; gain = 393.359 ; free physical = 3279 ; free virtual = 35273
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1521.930 ; gain = 393.359 ; free physical = 3342 ; free virtual = 35335
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1521.930 ; gain = 393.359 ; free physical = 3342 ; free virtual = 35335
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1521.930 ; gain = 393.359 ; free physical = 3342 ; free virtual = 35335
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1521.930 ; gain = 393.359 ; free physical = 3342 ; free virtual = 35335
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1521.930 ; gain = 393.359 ; free physical = 3342 ; free virtual = 35335
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1521.930 ; gain = 393.359 ; free physical = 3342 ; free virtual = 35335
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1521.930 ; gain = 393.359 ; free physical = 3342 ; free virtual = 35335
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1536.930 ; gain = 420.941 ; free physical = 3261 ; free virtual = 35255

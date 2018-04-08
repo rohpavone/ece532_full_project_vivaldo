@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="design_1_wrapper_hw_platform_2" key="programflash.hwplatform"/>
+	<item value="Local" key="design_1_wrapper_hw_platform_2-target"/>
+	<item value="false" key="design_1_wrapper_hw_platform_2-blankCheck"/>
+	<item value="Digilent Nexys4DDR 210292646178A/1-xc7a100t" key="design_1_wrapper_hw_platform_2-device"/>
+	<item value="28f00am29ew-bpi-x16" key="design_1_wrapper_hw_platform_2-flashType"/>
+	<item value="/home/rohan/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit" key="design_1_wrapper_hw_platform_2-imgFile"/>
+	<item value="" key="design_1_wrapper_hw_platform_2-fsblFile"/>
+	<item value="false" key="design_1_wrapper_hw_platform_2-verifyFlash"/>
+	<item value="" key="design_1_wrapper_hw_platform_2-offSet"/>
+</section>

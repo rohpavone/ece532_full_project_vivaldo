@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# updatemem v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# 
+# Start of session at: Mon Mar 19 17:08:00 2018
+# Process ID: 5884
+# Current directory: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr
+# Command line: updatemem -mode batch -source /cad1/Xilinx/SDK/2017.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper_hw_platform_1/design_1_wrapper.mmi -data /cad1/Xilinx/SDK/2017.2/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc design_1_i/microblaze_0 -bit /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper_hw_platform_1/design_1_wrapper.bit -out /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper_hw_platform_1/download.bit -force
+# Log file: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/updatemem.log
+# Journal file: /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/updatemem.jou
+#-----------------------------------------------------------
+source /cad1/Xilinx/SDK/2017.2/scripts/updatemem/main.tcl -notrace
+ Loading bitfile /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper_hw_platform_1/design_1_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream /nfs/ug/homes-1/t/tramblei/vivaldo_fresh_eth_xadc_fft_dma_corr/vivaldo_fresh_eth_xadc_fft_dma_corr.sdk/design_1_wrapper_hw_platform_1/download.bit...
+  update_mem: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 879.199 ; gain = 386.336 ; free physical = 3518 ; free virtual = 34359
+INFO: [Common 17-206] Exiting updatemem at Mon Mar 19 17:08:10 2018...

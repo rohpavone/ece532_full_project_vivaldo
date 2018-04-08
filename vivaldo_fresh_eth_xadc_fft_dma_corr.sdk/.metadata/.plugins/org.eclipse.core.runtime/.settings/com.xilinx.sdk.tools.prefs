@@ -1,0 +1,13 @@
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:.bss=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:.data=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:.rodata=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:.sbss=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:.sbss2=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:.sdata=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:.sdata2=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:.text=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:heap=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:heap-size=110217728
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:stack=mig_7series_0_memaddr
+com.xilinx.sdk.linkgen.prefs.eth_with_dma_fft_xadc\:stack-size=1024
+eclipse.preferences.version=1
